@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes</title>
+</head>
+<body>
+    <!--<img src="img/futbol.jpg" alt="Foto de futbol">-->
+    <!--<img 
+    src="img/futbol.jpg" 
+    srcset="img/balon.jpg 1.5x, img/balon2.jpg 2x">--> 
+    
+    <!--DevicePixelRatio-->
+
+    <picture> <!--Usa las media querys de css-->
+        <source srcset="img/balon2.jpg" media="(min-width: 900px)"> <!--Tiene varios elementos source para cada imagen-->
+        <source srcset="img/balon.jpg" media="(min-width: 700px)"> <!--Es como un condicional para imagenes-->
+        <img src="img/futbol.jpg" alt="Imagen de un balón">
+    </picture>
+</body>
+</html>
