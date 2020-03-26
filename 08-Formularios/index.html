@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+    <form>
+        <fieldset><!--Agrupa datos-->
+        <legend>Tus datos personales</legend>
+        <div>
+        <!--<label>Ingrese su nombre de usuario
+        <input id="username" name="username" value="Alvaro" type="text">
+        </label>-->
+        <input name="username" placeholder="Ingrese su nombre de usuario">
+        </div>
+        <div>
+            <label>
+                Ingrese su correo
+                <input type="email">
+            </label>
+        </div>
+        </fieldset>
+        <fieldset>
+        <legend>Tus datos personales</legend>
+        <div>
+            <label>
+                Tu fecha de nacimiento
+                <input type="date">
+            </label>
+        </div>
+        <div>
+            <label>
+                Ingrese la cantidad que va a comprar
+                <input type="number" value="2" readonly> <!-- readonly : No puede modificarse-->
+            </label>
+        </div>
+        <div>
+        <label>
+            Ingrese su contraseña
+            <input type="password" name="password" required>
+        </label>
+        </div>
+        </fieldset>
+        <fieldset>
+            <legend>Tus pasatiempos</legend>
+            <label><input type="checkbox">Deporte</label>
+            <label><input type="checkbox">Cine</label>
+            <label><input type="checkbox">Música</label>
+            <label><input type="checkbox">Leer</label>
+        </fieldset>
+        <fieldset>
+            <legend>Tu género</legend>
+            <label><input type="radio" name="gender">Hombre</label>
+            <label><input type="radio" name="gender">Mujer</label>
+        </fieldset>
+        <fieldset>
+            <legend>Select y opciones</legend>
+            <label for="country">Escoge tu pais</label>
+            <select name="country" id="country">
+                <optgroup label="America"> <!--Agrupa-->
+                    <option value="pe">Perú</option>
+                    <option value="co">Colombia</option>
+                    <option value="ve">Venezuela</option>
+                </optgroup>
+                <optgroup label="Europa">
+                    <option value="es">España</option>
+                    <option value="it">Italia</option>
+                </optgroup>
+            </select>
+            <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Escribe tu mensaje"></textarea>
+        </fieldset>
+        <input type="submit" value="Iniciar sesión">
+        <!--<button>Enviar</button>-->
+    </form>
+    <script>
+        document.getElementById('username').addEventListener('keyup', e =>{
+            console.log(e.target.value)
+        })
+    </script>
+</body>
+</html>
